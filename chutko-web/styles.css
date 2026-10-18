@@ -1189,3 +1189,67 @@ p { margin: 0 0 14px; }
   .custom-dialog { max-width: 520px; margin: auto; border-radius: var(--r-lg); }
   .custom__media { height: 220px; }
 }
+
+/* ==========================================================
+   SWOT tabuľka + tvorcovia (o-nas.html)
+   ========================================================== */
+.nav-open .mnav a:nth-child(7) { transition-delay: .3s; }
+.nav-open .mnav a:nth-child(8) { transition-delay: .35s; }
+.mnav a { font-size: clamp(30px, 8vw, 40px); padding: 9px 0; }
+
+.swot-wrap { margin-top: 8px; }
+.swot { width: 100%; border-collapse: separate; border-spacing: 0; }
+.swot thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.swot tbody, .swot tr, .swot th, .swot td { display: block; }
+.swot tbody { display: grid; gap: 12px; }
+.swot__row { --tone: var(--mint); --accent: var(--olive); overflow: hidden; border-radius: var(--r); background: var(--tone); }
+.swot__row--s { --tone: #e0efe4; --accent: #5f8a6b; }
+.swot__row--w { --tone: #f8efd2; --accent: #b98a1e; }
+.swot__row--o { --tone: var(--sky-soft); --accent: #4f8db5; }
+.swot__row--t { --tone: #f6dcd8; --accent: #b8574b; }
+.swot__row > * { padding: 18px 20px; }
+.swot__row > th { display: flex; align-items: center; gap: 14px; padding-bottom: 6px; font-weight: 600; text-align: left; font-family: var(--display); font-size: 22px; line-height: 1.15; letter-spacing: -.01em; }
+.swot__row > th small { display: block; margin-top: 3px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .04em; color: var(--muted); }
+.swot__letter { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: var(--white); font-family: var(--mono); font-size: 20px; font-weight: 700; }
+.swot__type { padding-top: 0 !important; padding-bottom: 6px !important; font-size: 14px; color: var(--muted); }
+.swot__list { margin: 0; padding: 0 0 0 20px; display: grid; gap: 10px; font-size: 15px; line-height: 1.5; }
+.swot__list li::marker { font-family: var(--mono); font-weight: 700; color: var(--accent); }
+.swot__ex { padding-top: 6px !important; }
+
+@media (min-width: 900px) {
+  .swot { border-spacing: 0 10px; }
+  .swot thead { position: static; width: auto; height: auto; overflow: visible; clip-path: none; display: table-header-group; }
+  .swot tbody { display: table-row-group; }
+  .swot tr { display: table-row; }
+  .swot th, .swot td { display: table-cell; }
+  .swot thead th { padding: 16px 22px; background: var(--ink); color: var(--white); font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-align: left; }
+  .swot thead th:first-child { border-radius: var(--r) 0 0 var(--r); }
+  .swot thead th:last-child { border-radius: 0 var(--r) var(--r) 0; }
+  .swot__row { background: none; overflow: visible; }
+  .swot__row > * { background: var(--tone); padding: 22px; vertical-align: middle; }
+  .swot__row > th { display: table-cell; width: 27%; padding-bottom: 22px; border-radius: var(--r) 0 0 var(--r); border-left: 6px solid var(--accent); }
+  .swot__row > th > * { vertical-align: middle; }
+  .swot__row > th { display: table-cell; }
+  .swot__type { width: 20%; padding-top: 22px !important; padding-bottom: 22px !important; }
+  .swot__ex { padding-top: 22px !important; border-radius: 0 var(--r) var(--r) 0; }
+}
+
+/* Tvorcovia */
+.team { display: grid; gap: 12px; margin: 28px 0 0; padding: 0; list-style: none; }
+.team li { display: flex; align-items: center; gap: 16px; padding: 18px; border-radius: var(--r-lg); background: var(--white); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.team li:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.team__avatar { flex: none; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50% 50% 50% 10px; background: var(--sage); color: var(--ink); font-family: var(--display); font-size: 24px; font-weight: 600; font-style: italic; letter-spacing: -.02em; }
+.team li:nth-child(2) .team__avatar { background: var(--sky); }
+.team li:nth-child(3) .team__avatar { background: var(--olive); color: var(--white); }
+.team li:nth-child(4) .team__avatar { background: var(--ink); color: var(--mint); }
+.team h3 { font-family: var(--display); font-size: 22px; font-weight: 500; letter-spacing: -.02em; line-height: 1.15; }
+.team p { margin: 4px 0 0; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+@media (min-width: 720px) {
+  .team { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media (min-width: 1024px) {
+  .team { grid-template-columns: repeat(4, 1fr); }
+  .team li { flex-direction: column; align-items: flex-start; padding: 26px; gap: 22px; }
+  .team__avatar { width: 84px; height: 84px; font-size: 32px; }
+}
