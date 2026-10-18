@@ -25,6 +25,7 @@
         <a href="menu.html">Menu</a>
         <a href="donaska.html">Donáška</a>
         <a href="o-nas.html" aria-current="page">O nás</a>
+        <a href="o-nas.html#tvorcovia">Tvorcovia</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="hra.html">Hra 🎮</a>
       </nav>
@@ -40,8 +41,9 @@
     <a href="menu.html"><small>02</small>Menu</a>
     <a href="donaska.html"><small>03</small>Donáška</a>
     <a href="o-nas.html" aria-current="page"><small>04</small>O nás</a>
-    <a href="kontakt.html"><small>05</small>Kontakt</a>
-    <a href="hra.html"><small>06</small>Hra 🎮</a>
+    <a href="o-nas.html#tvorcovia"><small>05</small>Tvorcovia</a>
+    <a href="kontakt.html"><small>06</small>Kontakt</a>
+    <a href="hra.html"><small>07</small>Hra 🎮</a>
     <div class="mnav__foot">
       <p>Objednávky: <a href="tel:+421900000000">+421 900 000 000</a></p>
       <a href="kosik.html" class="btn btn--sky btn--block">Otvoriť košík <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -88,6 +90,55 @@
       </div>
     </section>
 
+    <section class="section section--mint" id="swot">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label c-olive">Analýza projektu</p>
+          <h2 class="display h2">SWOT <em>analýza</em></h2>
+          <p class="lead">Silné a slabé stránky nášho projektu, príležitosti na rast a riziká, ktoré sledujeme.</p>
+        </div>
+        <div class="swot-wrap">
+          <table class="swot">
+            <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">SWOT analýza projektu Chutko</caption>
+            <thead><tr><th scope="col">Kategória</th><th scope="col">Typ faktora</th><th scope="col">Konkrétne príklady (min. 3)</th></tr></thead>
+            <tbody>
+          <tr class="swot__row swot__row--s reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">S</span><span>Silné stránky<small>Strengths</small></span></th>
+            <td class="swot__type">Vnútorné výhody nášho projektu</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Intuitívne UI/UX rozhranie, ktoré umožňuje používateľovi zostaviť a zaplatiť objednávku na 3 kliknutia.</li><li>Vysoká rýchlosť načítania digitálneho menu vďaka využitiu moderných webových frameworkov (React/Next.js).</li><li>Zabudovaný prispôsobovač jedál, ktorý umožňuje zákazníkom flexibilne pridávať alebo odoberať ingrediencie v reálnom čase.</li></ol></td>
+          </tr>
+          <tr class="swot__row swot__row--w reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">W</span><span>Slabé stránky<small>Weaknesses</small></span></th>
+            <td class="swot__type">Vnútorné nedostatky v súčasnej fáze</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Obmedzená funkcionalita administračného panela v prvej verzii projektu (napr. absencia hlbokej analytiky predaja a grafov).</li><li>Chýbajúca história reálneho testovania aplikácie pod vysokou používateľskou záťažou v produkcii.</li><li>Nulová počiatočná používateľská základňa a zatiaľ nevyriešená SEO optimalizácia pre internetové vyhľadávače.</li></ol></td>
+          </tr>
+          <tr class="swot__row swot__row--o reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">O</span><span>Príležitosti<small>Opportunities</small></span></th>
+            <td class="swot__type">Vonkajšie faktory pre rast</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Zavedenie automatickej verifikácie ISIC pre poskytovanie špeciálnych zliav študentom UPJŠ a iných univerzít v Košiciach.</li><li>Integrácia vernostného programu a systému odporúčaní (referrals) pre rýchle organické prilákanie prvých zákazníkov.</li><li>Budúce rozšírenie platformy do formátu PWA (Progressive Web App) pre komfortné využívanie stránky ako mobilnej aplikácie.</li></ol></td>
+          </tr>
+          <tr class="swot__row swot__row--t reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">T</span><span>Hrozby<small>Threats</small></span></th>
+            <td class="swot__type">Vonkajšie riziká</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Priama konkurencia s už etablovanými gigantmi v oblasti donášky jedla na slovenskom trhu (Wolt, Bistro.sk, Foodora).</li><li>Možné technické výpadky API platobných brán tretích strán (napr. Stripe/GoPay), ktoré by zablokovali spracovanie platieb.</li><li>Riziko pádov serverov alebo databázových chýb počas špičkových záťaží (napríklad počas univerzitnej obedňajšej prestávky).</li></ol></td>
+          </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tvorcovia">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label c-olive">Tím</p>
+          <h2 class="display h2">Naši <em>tvorcovia</em></h2>
+          <p class="lead">Za týmto projektom stoja títo ľudia.</p>
+        </div>
+        <ul class="team"><li class="reveal"><span class="team__avatar" aria-hidden="true">TŠ</span><div><h3>Tereza Šimková</h3><p>Tvorca</p></div></li><li class="reveal"><span class="team__avatar" aria-hidden="true">DY</span><div><h3>Denys Yatsenko</h3><p>Tvorca</p></div></li><li class="reveal"><span class="team__avatar" aria-hidden="true">TD</span><div><h3>Trufan Daniil</h3><p>Tvorca</p></div></li><li class="reveal"><span class="team__avatar" aria-hidden="true">AK</span><div><h3>Arsenii Kurochka</h3><p>Tvorca</p></div></li></ul>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container two-cards">
         <a href="kontakt.html" class="card-link reveal">
@@ -123,6 +174,7 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="donaska.html">Donáška</a></li>
             <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="o-nas.html#tvorcovia">Tvorcovia</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="hra.html">Hra o zľavu</a></li>
           </ul>
