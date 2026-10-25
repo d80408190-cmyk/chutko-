@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sk" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F8F3">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Administrácia menu reštaurácie Chutko.">
+  <title>Správa menu — Chutko</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23778764'/%3E%3Cpath d='M16 27c0-9-5-15-10-18 1 8 4 14 10 18Zm0 0c0-9 5-15 10-18-1 8-4 14-10 18Z' fill='%23CDE1D3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="header">
+    <div class="container header__row">
+      <a href="index.html" class="logo" aria-label="Chutko — domov">
+        <span class="logo__mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29C16 18 10 10 4 7c1 9 5 17 12 22Zm0 0c0-11 6-19 12-22-1 9-5 17-12 22Z" fill="currentColor"/></svg></span>
+        <span class="logo__text">Chut<em>ko</em></span>
+      </a>
+      <div class="header__actions">
+        <a href="menu.html" class="btn btn--line adm-small">Zobraziť web <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin">
+    <section class="phero phero--mint" style="padding-bottom:36px">
+      <div class="container">
+        <div>
+          <nav class="crumbs" aria-label="Omrvinky"><a href="index.html">Domov</a><span>/</span><span>Správa menu</span></nav>
+          <h1 class="display h1">Správa <em class="c-olive">menu</em></h1>
+        </div>
+        <p class="lead">Pridávajte, upravujte a mažte jedlá, meňte ceny, fotky a označte, čo je práve vypredané.</p>
+      </div>
+    </section>
+
+    <div class="container" style="padding-top:24px;padding-bottom:80px">
+      <p class="mode" data-mode></p>
+
+      <div class="login panel" data-login hidden>
+        <h2>Prihlásenie</h2>
+        <form>
+          <label class="field"><span>Heslo správcu</span><input name="password" type="password" autocomplete="current-password" required></label>
+          <p class="form-error" data-login-error hidden></p>
+          <button class="btn btn--ink btn--block" type="submit">Prihlásiť sa</button>
+        </form>
+      </div>
+
+      <div data-admin-app hidden>
+        <div class="adm-toolbar">
+          <button class="btn btn--ink" type="button" data-add>+ Nové jedlo</button>
+          <div class="adm-toolbar__tools">
+            <button class="btn btn--line adm-small" type="button" data-export>Exportovať</button>
+            <label class="btn btn--line adm-small">Importovať<input type="file" accept="application/json,.json" data-import hidden></label>
+            <button class="btn btn--line adm-small" type="button" data-reset>Obnoviť pôvodné</button>
+          </div>
+        </div>
+        <p class="adm-stats" data-stats></p>
+        <div data-admin-list></div>
+      </div>
+    </div>
+  </main>
+
+  <dialog class="adm-dialog" data-dialog aria-labelledby="dlg-title">
+    <form data-dish-form novalidate>
+      <div class="adm-dialog__head">
+        <h2 class="display" id="dlg-title" data-dialog-title>Upraviť jedlo</h2>
+        <button type="button" class="icon-btn" data-close-dialog aria-label="Zavrieť"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="adm-dialog__body">
+        <div class="adm-photo">
+          <img data-preview alt="Náhľad fotky" width="480" height="360">
+          <label class="btn btn--mint adm-small"><span data-upload-label>Nahrať vlastnú fotku</span><input type="file" accept="image/*" data-file hidden></label>
+          <input type="hidden" name="img">
+          <details class="adm-gallery-wrap">
+            <summary>alebo vybrať z galérie</summary>
+            <div class="adm-gallery" data-gallery></div>
+          </details>
+        </div>
+        <label class="field"><span>Názov</span><input name="name" type="text" maxlength="80" required placeholder="Napr. Hovädzí steak"></label>
+        <label class="field"><span>Popis</span><textarea name="desc" rows="3" maxlength="300" placeholder="Suroviny, príloha, omáčka…"></textarea></label>
+        <div class="field comp-field">
+          <span>Zloženie <small>– zákazník môže suroviny odobrať</small></span>
+          <div class="ing-tags" data-ing-list></div>
+          <div class="inline-add">
+            <input type="text" data-ing-input maxlength="200" placeholder="Napr. cibuľa (viac naraz cez čiarku)">
+            <button type="button" class="btn btn--mint adm-small" data-ing-add>Pridať</button>
+          </div>
+        </div>
+        <div class="field comp-field">
+          <span>Prílohy navyše <small>– za príplatok</small></span>
+          <ul class="extra-list" data-extra-list></ul>
+          <div class="inline-add inline-add--extra">
+            <input type="text" data-extra-name maxlength="40" placeholder="Napr. Slanina">
+            <input type="text" data-extra-price inputmode="decimal" placeholder="1,20 €">
+            <button type="button" class="btn btn--mint adm-small" data-extra-add>Pridať</button>
+          </div>
+        </div>
+        <div class="fields-2">
+          <label class="field"><span>Cena (€)</span><input name="price" type="text" inputmode="decimal" required placeholder="8,90"></label>
+          <label class="field"><span>Kategória</span><select name="cat"></select></label>
+        </div>
+        <label class="field"><span>Štítok (nepovinné)</span><input name="tag" type="text" maxlength="30" placeholder="Obľúbené, Vegánske, Novinka…" list="tag-list"></label>
+        <datalist id="tag-list"><option>Obľúbené</option><option>Novinka</option><option>Vegetariánske</option><option>Vegánske</option><option>Šéfkuchár odporúča</option><option>Domáce</option><option>Pikantné</option></datalist>
+        <fieldset class="choice choice--3"><legend>Farba štítku</legend><label><input type="radio" name="tone" value="" checked><span><i class="tone-dot tone-dot--light"></i>Svetlá</span></label><label><input type="radio" name="tone" value="sage"><span><i class="tone-dot tone-dot--sage"></i>Zelená</span></label><label><input type="radio" name="tone" value="sky"><span><i class="tone-dot tone-dot--sky"></i>Modrá</span></label></fieldset>
+        <label class="toggle-row"><span><b>Dostupné</b><small>Vypnite, keď sa jedlo minie.</small></span><span class="switch"><input type="checkbox" name="available" checked><span></span></span></label>
+        <label class="toggle-row"><span><b>Na úvodnej stránke</b><small>Zobrazí sa medzi najobľúbenejšími (max. 4).</small></span><span class="switch"><input type="checkbox" name="featured"><span></span></span></label>
+        <p class="form-error" data-form-error hidden></p>
+      </div>
+      <div class="adm-dialog__foot">
+        <button type="button" class="btn btn--line adm-danger" data-delete-in-form>Vymazať</button>
+        <button type="submit" class="btn btn--ink">Uložiť</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

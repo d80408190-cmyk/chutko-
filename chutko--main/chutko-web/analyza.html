@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="sk" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F8F3">
+  <meta name="description" content="Analýza projektu Chutko: SWOT analýza, Ganttov diagram a prehľad tímových rolí.">
+  <title>Analýza projektu — Chutko</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23778764'/%3E%3Cpath d='M16 27c0-9-5-15-10-18 1 8 4 14 10 18Zm0 0c0-9 5-15 10-18-1 8-4 14-10 18Z' fill='%23CDE1D3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="header">
+    <div class="container header__row">
+      <a href="index.html" class="logo" aria-label="Chutko — domov">
+        <span class="logo__mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29C16 18 10 10 4 7c1 9 5 17 12 22Zm0 0c0-11 6-19 12-22-1 9-5 17-12 22Z" fill="currentColor"/></svg></span>
+        <span class="logo__text">Chut<em>ko</em></span>
+      </a>
+      <nav class="nav" aria-label="Hlavné menu">
+        <a href="index.html">Domov</a>
+        <a href="menu.html">Menu</a>
+        <a href="donaska.html">Donáška</a>
+        <a href="o-nas.html">O nás</a>
+        <a href="o-nas.html#tvorcovia">Tvorcovia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="hra.html">Hra 🎮</a>
+      </nav>
+      <div class="header__actions">
+        <a href="kosik.html" class="icon-btn" aria-label="Košík"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12.5h-11L5.5 8Zm3.5 0V7a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="badge" data-cart-count hidden>0</span></a>
+        <a href="menu.html" class="btn btn--ink header__order">Objednať</a>
+        <button class="icon-btn burger" type="button" data-burger aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mnav" id="mnav" aria-label="Mobilné menu">
+    <a href="index.html"><small>01</small>Domov</a>
+    <a href="menu.html"><small>02</small>Menu</a>
+    <a href="donaska.html"><small>03</small>Donáška</a>
+    <a href="o-nas.html"><small>04</small>O nás</a>
+    <a href="o-nas.html#tvorcovia"><small>05</small>Tvorcovia</a>
+    <a href="kontakt.html"><small>06</small>Kontakt</a>
+    <a href="hra.html"><small>07</small>Hra 🎮</a>
+    <div class="mnav__foot">
+      <p>Objednávky: <a href="tel:+421900000000">+421 900 000 000</a></p>
+      <a href="kosik.html" class="btn btn--sky btn--block">Otvoriť košík <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="phero">
+      <div class="container">
+        <div>
+          <nav class="crumbs" aria-label="Omrvinky"><a href="index.html">Domov</a><span>/</span><a href="o-nas.html">O nás</a><span>/</span><span>Analýza projektu</span></nav>
+          <h1 class="display h1">Analýza <em>projektu</em></h1>
+        </div>
+        <p class="lead">Podrobnejší pohľad na prípravu projektu Chutko — biznis analýza, plánovanie realizácie a rozdelenie úloh v tíme.</p>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="swot">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label c-olive">Analýza projektu</p>
+          <h2 class="display h2">SWOT <em>analýza</em></h2>
+          <p class="lead">Silné a slabé stránky nášho projektu, príležitosti na rast a riziká, ktoré sledujeme.</p>
+        </div>
+        <div class="swot-wrap">
+          <table class="swot">
+            <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">SWOT analýza projektu Chutko</caption>
+            <thead><tr><th scope="col">Kategória</th><th scope="col">Typ faktora</th><th scope="col">Konkrétne príklady (min. 3)</th></tr></thead>
+            <tbody>
+          <tr class="swot__row swot__row--s reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">S</span><span>Silné stránky<small>Strengths</small></span></th>
+            <td class="swot__type">Vnútorné výhody nášho projektu</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Intuitívne UI/UX rozhranie, ktoré umožňuje používateľovi zostaviť a zaplatiť objednávku na 3 kliknutia.</li><li>Vysoká rýchlosť načítania digitálneho menu vďaka využitiu moderných webových frameworkov (React/Next.js).</li><li>Zabudovaný prispôsobovač jedál, ktorý umožňuje zákazníkom flexibilne pridávať alebo odoberať ingrediencie v reálnom čase.</li></ol></td>
+          </tr>
+          <tr class="swot__row swot__row--w reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">W</span><span>Slabé stránky<small>Weaknesses</small></span></th>
+            <td class="swot__type">Vnútorné nedostatky v súčasnej fáze</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Obmedzená funkcionalita administračného panela v prvej verzii projektu (napr. absencia hlbokej analytiky predaja a grafov).</li><li>Chýbajúca história reálneho testovania aplikácie pod vysokou používateľskou záťažou v produkcii.</li><li>Nulová počiatočná používateľská základňa a zatiaľ nevyriešená SEO optimalizácia pre internetové vyhľadávače.</li></ol></td>
+          </tr>
+          <tr class="swot__row swot__row--o reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">O</span><span>Príležitosti<small>Opportunities</small></span></th>
+            <td class="swot__type">Vonkajšie faktory pre rast</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Zavedenie automatickej verifikácie ISIC pre poskytovanie špeciálnych zliav študentom UPJŠ a iných univerzít v Košiciach.</li><li>Integrácia vernostného programu a systému odporúčaní (referrals) pre rýchle organické prilákanie prvých zákazníkov.</li><li>Budúce rozšírenie platformy do formátu PWA (Progressive Web App) pre komfortné využívanie stránky ako mobilnej aplikácie.</li></ol></td>
+          </tr>
+          <tr class="swot__row swot__row--t reveal">
+            <th scope="row"><span class="swot__letter" aria-hidden="true">T</span><span>Hrozby<small>Threats</small></span></th>
+            <td class="swot__type">Vonkajšie riziká</td>
+            <td class="swot__ex"><ol class="swot__list"><li>Priama konkurencia s už etablovanými gigantmi v oblasti donášky jedla na slovenskom trhu (Wolt, Bistro.sk, Foodora).</li><li>Možné technické výpadky API platobných brán tretích strán (napr. Stripe/GoPay), ktoré by zablokovali spracovanie platieb.</li><li>Riziko pádov serverov alebo databázových chýb počas špičkových záťaží (napríklad počas univerzitnej obedňajšej prestávky).</li></ol></td>
+          </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ganttov-diagram">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label c-olive">Plánovanie</p>
+          <h2 class="display h2">Ganttov <em>diagram</em></h2>
+          <p class="lead">Rozdelenie projektu na fázy, úlohy a ich časové trvanie od prípravy až po spustenie reštaurácie.</p>
+        </div>
+        <div class="reveal" style="border-radius:var(--r); overflow:hidden; border:1px solid rgba(0,0,0,.08)">
+          <img src="img/gantt-diagram.png" alt="Ganttov diagram: Reštaurácia zdravého stravovania — fázy prípravy, realizácie a spustenia projektu" style="display:block; width:100%; height:auto;">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink" id="tim">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label c-sky">Tím</p>
+          <h2 class="display h2">Kto čo <em>robil</em></h2>
+          <p class="lead">Rozdelenie úloh pri príprave analýzy a jej zverejnení na webe.</p>
+        </div>
+        <ul class="team">
+          <li class="reveal">
+            <span class="team__avatar" aria-hidden="true">D</span>
+            <div><h3>Daniil</h3><p>Analytik / Tvorca diagramu — analýza biznis modelu a tvorba Ganttovho diagramu</p></div>
+          </li>
+          <li class="reveal">
+            <span class="team__avatar" aria-hidden="true">T</span>
+            <div><h3>Tereza</h3><p>Lokalizácia a kontrola kvality — jazyková a terminologická kontrola</p></div>
+          </li>
+          <li class="reveal">
+            <span class="team__avatar" aria-hidden="true">D</span>
+            <div><h3>Denis</h3><p>Web integrácia — zverejnenie diagramu na stránke</p></div>
+          </li>
+          <li class="reveal">
+            <span class="team__avatar" aria-hidden="true">A</span>
+            <div><h3>Arsenij</h3><p>Projektový manažér — koordinácia tímu a finálne odovzdanie</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__big">
+        <p class="display">Hladní? <em>Sme na&nbsp;ceste.</em></p>
+        <a href="menu.html" class="btn btn--sky">Objednať donášku <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo__text">Chut<em>ko</em></span></a>
+          <p style="margin-top:12px;max-width:30ch">Autorská kuchyňa, príjemná atmosféra a rýchla donáška z čerstvých lokálnych surovín.</p>
+        </div>
+        <div>
+          <h3>Stránky</h3>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="donaska.html">Donáška</a></li>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="o-nas.html#tvorcovia">Tvorcovia</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="hra.html">Hra o zľavu</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li><a href="tel:+421900000000">+421 900 000 000</a></li>
+            <li><a href="mailto:ahoj@chutko.sk">ahoj@chutko.sk</a></li>
+            <li>Hlavná 12, Bratislava</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Otvorené</h3>
+          <ul>
+            <li>Po–Pi 7:30–22:00</li>
+            <li>So–Ne 9:00–22:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Chutko</span>
+        <span>Fotografie: Unsplash · <a href="admin.html">Správa menu</a></span>
+      </div>
+    </div>
+  </footer>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <a href="kosik.html" class="cart-bar" data-cart-bar hidden>
+    <span class="cart-bar__count" data-cart-count>0</span>
+    <span class="cart-bar__label">Váš košík</span>
+    <span class="cart-bar__total"><span data-cart-sum>0,00 €</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="fun.js"></script>
+</body>
+</html>

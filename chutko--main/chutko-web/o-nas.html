@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sk" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F8F3">
+  <meta name="description" content="Útulný gastronomický priestor s autorskou kuchyňou z čerstvých lokálnych surovín.">
+  <title>O nás — Chutko</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23778764'/%3E%3Cpath d='M16 27c0-9-5-15-10-18 1 8 4 14 10 18Zm0 0c0-9 5-15 10-18-1 8-4 14-10 18Z' fill='%23CDE1D3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="header">
+    <div class="container header__row">
+      <a href="index.html" class="logo" aria-label="Chutko — domov">
+        <span class="logo__mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29C16 18 10 10 4 7c1 9 5 17 12 22Zm0 0c0-11 6-19 12-22-1 9-5 17-12 22Z" fill="currentColor"/></svg></span>
+        <span class="logo__text">Chut<em>ko</em></span>
+      </a>
+      <nav class="nav" aria-label="Hlavné menu">
+        <a href="index.html">Domov</a>
+        <a href="menu.html">Menu</a>
+        <a href="donaska.html">Donáška</a>
+        <a href="o-nas.html" aria-current="page">O nás</a>
+        <a href="o-nas.html#tvorcovia">Tvorcovia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="hra.html">Hra 🎮</a>
+      </nav>
+      <div class="header__actions">
+        <a href="kosik.html" class="icon-btn" aria-label="Košík"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12.5h-11L5.5 8Zm3.5 0V7a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="badge" data-cart-count hidden>0</span></a>
+        <a href="menu.html" class="btn btn--ink header__order">Objednať</a>
+        <button class="icon-btn burger" type="button" data-burger aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mnav" id="mnav" aria-label="Mobilné menu">
+    <a href="index.html"><small>01</small>Domov</a>
+    <a href="menu.html"><small>02</small>Menu</a>
+    <a href="donaska.html"><small>03</small>Donáška</a>
+    <a href="o-nas.html" aria-current="page"><small>04</small>O nás</a>
+    <a href="o-nas.html#tvorcovia"><small>05</small>Tvorcovia</a>
+    <a href="kontakt.html"><small>06</small>Kontakt</a>
+    <a href="hra.html"><small>07</small>Hra 🎮</a>
+    <div class="mnav__foot">
+      <p>Objednávky: <a href="tel:+421900000000">+421 900 000 000</a></p>
+      <a href="kosik.html" class="btn btn--sky btn--block">Otvoriť košík <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="phero">
+      <div class="container">
+        <div>
+          <nav class="crumbs" aria-label="Omrvinky"><a href="index.html">Domov</a><span>/</span><span>O nás</span></nav>
+          <h1 class="display h1">Útulný priestor <em>pre dobré jedlo</em></h1>
+        </div>
+        <p class="lead">Náš projekt je útulný gastronomický priestor, kde sa spája autorská kuchyňa, príjemná atmosféra a moderné služby.</p>
+        <div class="phero__img"><img src="img/priestor.jpg" alt="Interiér reštaurácie Chutko" width="1200" height="900"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="split__media split__media--arch reveal">
+          <img src="img/interier.jpg" alt="Hostia pri večeri" loading="lazy">
+          <img class="float" src="img/avokado.jpg" alt="" loading="lazy">
+        </div>
+        <div class="reveal">
+          <p class="label c-olive">Náš príbeh</p>
+          <h2 class="display h2">Každý hosť <em>je výnimočný</em></h2>
+          <p class="lead">Vytvorili sme malú reštauráciu, v ktorej sa každý hosť cíti výnimočne – od komorného interiéru až po jedlá pripravené z čerstvých lokálnych surovín.</p>
+          <ul class="perks"><li class="reveal"><span class="perks__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 20V9l6-5 6 5v11M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Komorný interiér</h3><p>Malá reštaurácia, kde sa cítite ako doma.</p></div></li><li class="reveal"><span class="perks__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c0-7-4-12-9-14 0 7 3 12 9 14Zm0 0c0-7 4-12 9-14 0 7-3 12-9 14Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Lokálne suroviny</h3><p>Čerstvé potraviny od overených dodávateľov z okolia.</p></div></li><li class="reveal"><span class="perks__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14h10v6H7zM7 14a4 4 0 1 1 2-7.5 4 4 0 0 1 6 0A4 4 0 1 1 17 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Autorská kuchyňa</h3><p>Recepty, ktoré nenájdete nikde inde.</p></div></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink">
+      <div class="container split split--rev">
+        <div class="split__media reveal">
+          <img src="img/sef.jpg" alt="Šéfkuchár pri sporáku" loading="lazy">
+        </div>
+        <div class="reveal">
+          <p class="label c-sky">Naše poslanie</p>
+          <p class="quote">Prinášať radosť a kulinársky zážitok bez ohľadu na to, kde sa nachádzate: <em>za naším stolom</em> alebo <em>vo svojej obývačke.</em></p>
+          <p style="margin-top:20px">Navštívte nás na šálku kávy alebo si objednajte donášku na pár klikov – o váš dokonalý pôžitok sa radi postaráme!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tvorcovia">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="label c-olive">Tím</p>
+          <h2 class="display h2">Naši <em>tvorcovia</em></h2>
+          <p class="lead">Za týmto projektom stoja títo ľudia.</p>
+        </div>
+        <ul class="team"><li class="reveal"><span class="team__avatar" aria-hidden="true">TŠ</span><div><h3>Tereza Šimková</h3><p>Tvorca</p></div></li><li class="reveal"><span class="team__avatar" aria-hidden="true">DY</span><div><h3>Denys Yatsenko</h3><p>Tvorca</p></div></li><li class="reveal"><span class="team__avatar" aria-hidden="true">TD</span><div><h3>Trufan Daniil</h3><p>Tvorca</p></div></li><li class="reveal"><span class="team__avatar" aria-hidden="true">AK</span><div><h3>Arsenii Kurochka</h3><p>Tvorca</p></div></li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-cards">
+        <a href="kontakt.html" class="card-link reveal">
+          <img src="img/vecer.jpg" alt="" loading="lazy">
+          <small>Navštívte nás</small>
+          <strong>Rezervujte si stôl</strong>
+          <span class="arrow">Kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a href="menu.html" class="card-link reveal reveal-d1">
+          <img src="img/hero.jpg" alt="" loading="lazy">
+          <small>Objednajte si</small>
+          <strong>Naše menu</strong>
+          <span class="arrow">Pozrieť menu <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__big">
+        <p class="display">Hladní? <em>Sme na&nbsp;ceste.</em></p>
+        <a href="menu.html" class="btn btn--sky">Objednať donášku <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo__text">Chut<em>ko</em></span></a>
+          <p style="margin-top:12px;max-width:30ch">Autorská kuchyňa, príjemná atmosféra a rýchla donáška z čerstvých lokálnych surovín.</p>
+        </div>
+        <div>
+          <h3>Stránky</h3>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="donaska.html">Donáška</a></li>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="o-nas.html#tvorcovia">Tvorcovia</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="hra.html">Hra o zľavu</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li><a href="tel:+421900000000">+421 900 000 000</a></li>
+            <li><a href="mailto:ahoj@chutko.sk">ahoj@chutko.sk</a></li>
+            <li>Hlavná 12, Bratislava</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Otvorené</h3>
+          <ul>
+            <li>Po–Pi 7:30–22:00</li>
+            <li>So–Ne 9:00–22:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Chutko</span>
+        <span>Fotografie: Unsplash · <a href="admin.html">Správa menu</a> · <a href="analyza.html">Analýza projektu</a></span>
+      </div>
+    </div>
+  </footer>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <a href="kosik.html" class="cart-bar" data-cart-bar hidden>
+    <span class="cart-bar__count" data-cart-count>0</span>
+    <span class="cart-bar__label">Váš košík</span>
+    <span class="cart-bar__total"><span data-cart-sum>0,00 €</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="fun.js"></script>
+</body>
+</html>

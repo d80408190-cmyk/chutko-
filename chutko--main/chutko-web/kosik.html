@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="sk" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F4F8F3">
+  <meta name="description" content="Váš košík a objednávka donášky.">
+  <title>Košík — Chutko</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23778764'/%3E%3Cpath d='M16 27c0-9-5-15-10-18 1 8 4 14 10 18Zm0 0c0-9 5-15 10-18-1 8-4 14-10 18Z' fill='%23CDE1D3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="header">
+    <div class="container header__row">
+      <a href="index.html" class="logo" aria-label="Chutko — domov">
+        <span class="logo__mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29C16 18 10 10 4 7c1 9 5 17 12 22Zm0 0c0-11 6-19 12-22-1 9-5 17-12 22Z" fill="currentColor"/></svg></span>
+        <span class="logo__text">Chut<em>ko</em></span>
+      </a>
+      <nav class="nav" aria-label="Hlavné menu">
+        <a href="index.html">Domov</a>
+        <a href="menu.html">Menu</a>
+        <a href="donaska.html">Donáška</a>
+        <a href="o-nas.html">O nás</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="hra.html">Hra 🎮</a>
+      </nav>
+      <div class="header__actions">
+        <a href="kosik.html" class="icon-btn" aria-label="Košík"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12.5h-11L5.5 8Zm3.5 0V7a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="badge" data-cart-count hidden>0</span></a>
+        <a href="menu.html" class="btn btn--ink header__order">Objednať</a>
+        <button class="icon-btn burger" type="button" data-burger aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mnav" id="mnav" aria-label="Mobilné menu">
+    <a href="index.html"><small>01</small>Domov</a>
+    <a href="menu.html"><small>02</small>Menu</a>
+    <a href="donaska.html"><small>03</small>Donáška</a>
+    <a href="o-nas.html"><small>04</small>O nás</a>
+    <a href="kontakt.html"><small>05</small>Kontakt</a>
+    <a href="hra.html"><small>06</small>Hra 🎮</a>
+    <div class="mnav__foot">
+      <p>Objednávky: <a href="tel:+421900000000">+421 900 000 000</a></p>
+      <a href="kosik.html" class="btn btn--sky btn--block">Otvoriť košík <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </nav>
+
+  <main data-cart-page>
+    <section class="phero phero--mint" style="padding-bottom:40px">
+      <div class="container">
+        <div>
+          <nav class="crumbs" aria-label="Omrvinky"><a href="index.html">Domov</a><span>/</span><a href="menu.html">Menu</a><span>/</span><span>Košík</span></nav>
+          <h1 class="display h1">Váš <em class="c-olive">košík</em></h1>
+        </div>
+        <p class="lead">Skontrolujte objednávku, zadajte adresu a my sa postaráme o zvyšok.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:32px">
+      <div class="container">
+        <div class="empty" data-cart-empty hidden>
+          <div class="empty__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12.5h-11L5.5 8Zm3.5 0V7a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h2>Košík je zatiaľ prázdny</h2>
+          <p>Vyberte si niečo chutné z nášho menu.</p>
+          <a href="menu.html" class="btn btn--ink">Prejsť do menu <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+
+        <div class="success" data-success hidden>
+          <div class="success__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h2>Ďakujeme <em>za objednávku!</em></h2>
+          <p data-success-text></p>
+          <a href="index.html" class="btn btn--sky">Späť na úvod <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+
+        <div class="cart-layout" data-cart-filled hidden>
+          <div class="panel panel--sticky">
+            <h2>Objednávka</h2>
+            <ul class="cart-list" data-cart-list></ul>
+            <div class="summary">
+              <div><span>Medzisúčet</span><span data-subtotal>0,00 €</span></div>
+              <div><span>Donáška</span><span data-delivery>2,50 €</span></div>
+              <div class="progress"><i data-progress></i></div>
+              <p class="summary__note" data-free-note></p>
+              <div data-discount-row hidden><span data-discount-label>Zľava</span><span><span data-discount>0,00 €</span> <button type="button" class="promo-x" data-promo-remove aria-label="Zrušiť zľavu">✕</button></span></div>
+              <div class="summary__total"><span>Spolu</span><span data-grand-total>0,00 €</span></div>
+            </div>
+            <div class="promo" data-promo-form>
+              <input type="text" data-promo-input placeholder="Promo kód" aria-label="Promo kód" autocomplete="off" autocapitalize="characters">
+              <button type="button" class="btn btn--ink" data-promo-apply>Použiť</button>
+            </div>
+            <p class="promo-hint">Nemáte kód? <a href="hra.html">Vyhrajte ho v hre 🎮</a></p>
+            <p style="margin:16px 0 0"><a href="menu.html" class="btn btn--line btn--block">Pridať ďalšie jedlo</a></p>
+          </div>
+
+          <form class="panel" data-order-form novalidate>
+            <h2>Doručenie</h2>
+            <label class="field"><span>Meno</span><input name="name" type="text" autocomplete="name" required placeholder="Ján Novák"></label>
+            <div class="fields-2">
+              <label class="field"><span>Telefón</span><input name="phone" type="tel" autocomplete="tel" required pattern="^[+0-9 ]{9,}$" placeholder="+421 9xx xxx xxx"></label>
+              <label class="field"><span>E-mail (nepovinné)</span><input name="email" type="email" autocomplete="email" placeholder="jan@email.sk"></label>
+            </div>
+            <label class="field"><span>Adresa</span><input name="address" type="text" autocomplete="street-address" required placeholder="Ulica, číslo, mesto"></label>
+            <fieldset class="choice">
+              <legend>Kam doručiť</legend>
+              <label><input type="radio" name="place" value="Domov" checked><span>Domov</span></label>
+              <label><input type="radio" name="place" value="Do kancelárie"><span>Do kancelárie</span></label>
+            </fieldset>
+            <label class="field"><span>Čas doručenia</span>
+              <select name="time">
+                <option>Čo najskôr (~40 min)</option>
+                <option>Na obed (11:30–13:00)</option>
+                <option>Popoludní (14:00–17:00)</option>
+                <option>Na večeru (18:00–20:00)</option>
+              </select>
+            </label>
+            <fieldset class="choice">
+              <legend>Platba pri prevzatí</legend>
+              <label><input type="radio" name="payment" value="Kartou" checked><span>Kartou</span></label>
+              <label><input type="radio" name="payment" value="Hotovosť"><span>Hotovosť</span></label>
+            </fieldset>
+            <label class="field"><span>Poznámka (nepovinné)</span><textarea name="note" rows="2" placeholder="Kód od brány, poschodie, bez cibule…"></textarea></label>
+            <p class="form-error" data-form-error hidden>Vyplňte, prosím, meno, telefón a adresu.</p>
+            <button class="btn btn--ink btn--block" type="submit">Odoslať objednávku · <span data-grand-total>0,00 €</span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__big">
+        <p class="display">Hladní? <em>Sme na&nbsp;ceste.</em></p>
+        <a href="menu.html" class="btn btn--sky">Objednať donášku <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo__text">Chut<em>ko</em></span></a>
+          <p style="margin-top:12px;max-width:30ch">Autorská kuchyňa, príjemná atmosféra a rýchla donáška z čerstvých lokálnych surovín.</p>
+        </div>
+        <div>
+          <h3>Stránky</h3>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="donaska.html">Donáška</a></li>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="hra.html">Hra o zľavu</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li><a href="tel:+421900000000">+421 900 000 000</a></li>
+            <li><a href="mailto:ahoj@chutko.sk">ahoj@chutko.sk</a></li>
+            <li>Hlavná 12, Bratislava</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Otvorené</h3>
+          <ul>
+            <li>Po–Pi 7:30–22:00</li>
+            <li>So–Ne 9:00–22:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Chutko</span>
+        <span>Fotografie: Unsplash · <a href="admin.html">Správa menu</a></span>
+      </div>
+    </div>
+  </footer>
+  <div class="palette-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="fun.js"></script>
+</body>
+</html>
